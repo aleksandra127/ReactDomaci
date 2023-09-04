@@ -11,10 +11,10 @@ export default function GamePage({ onEndGame }) {
 
   useEffect(() => {
     if (sum > 100) {
-      onEndGame(firstPlayerTurn ? 2 : 1);
-      alert(`Player ${firstPlayerTurn ? 'two' : 'one '} has won`)
+      onEndGame(firstPlayerTurn ? 1 : 2);
+      alert(`Player ${firstPlayerTurn ? 'one' : 'two '} has won`)
     }
-  }, [sum]);
+  }, [usedNumbers]);
 
   return (
     <div className='container'>
